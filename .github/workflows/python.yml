@@ -1,0 +1,16 @@
+name: Verificación Automática
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+      - name: Verificando ejecución
+        run: echo "La acción de GitHub se ejecutó exitosamente"
